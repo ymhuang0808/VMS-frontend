@@ -7,8 +7,8 @@ app.controller('MainController', ['$scope', function($scope) {
     $scope.reContent='To complete the register process, an email confirmation was sent to your email address, '+$scope.user+'. You can confirm your email address by clicking on the URL that was provided in the confirmation email sent you.';
     $scope.reContent1='If you have not received an email confirmation message be sent to your email address, please click the resent button to request a new one.';
 
-    $scope.create = function(user) {
+    $scope.create = function(volunteer) {
     	console.log("click create");
-    	console.log(user);
+    	console.log(volunteer);
     }
 }]);
