@@ -50,25 +50,25 @@
                             <div class="form-group">
                                 <label class="col-sm-2">First Name</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="FirstName" />
+                                    <input type="text" class="form-control" id="FirstName" ng-model="user.first_name" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Last Name</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="LastName" />
+                                    <input type="text" class="form-control" id="LastName" ng-model="user.last_name" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Username</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="Username" />
+                                    <input type="text" class="form-control" id="Username" ng-model="user.username" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Password</label>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control" id="Password" />
+                                    <input type="password" class="form-control" id="Password" ng-model="user.password" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -80,33 +80,34 @@
                             <div class="form-group">
                                 <label class="col-sm-2">Birth Year</label>
                                 <div class="col-sm-4">
-                                    <input type="date" class="form-control" id="Birth Year" />
+                                    <input type="date" class="form-control" id="Birth Year" ng-model="user.birth_year"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Gender</label>
                                 <div class="col-sm-4">
-                                    <input type="radio" name="sex" value="female">Female &nbsp; &nbsp;
-                                    <input type="radio" name="sex" value="male" checked>Male
+                                    <input type="radio" name="sex" value="female" ng-model="user.gender">Female &nbsp; &nbsp;
+                                    <input type="radio" name="sex" value="male" checked ng-mode="user.gender">Male
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">City</label>
                                 <div class="col-sm-4">
-                                    <select class="form-control" name="select">
-                                        <option value="select">Select</option>
-                                        <option value="select">Taoyuan</option>
-                                        <option value="select">TaiChung</option>
-                                        <option value="select">Chiai</option>
-                                        <option value="select">Tainan</option>
-                                        <option value="select">Gaoxiong</option>
+                                    <select class="form-control" name="select" ng-model="user.city_id">
+                                        <option value="-1">Select</option>
+                                        <option value="1">Taipei</option>
+                                        <option value="2">Taoyuan</option>
+                                        <option value="3">TaiChung</option>
+                                        <option value="4">Chiai</option>
+                                        <option value="5">Tainan</option>
+                                        <option value="6">Gaoxiong</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Address</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="Address" />
+                                    <input type="text" class="form-control" id="Address" ng-mode="user.address"/>
                                 </div>
                             </div>
                         </form>
@@ -120,29 +121,29 @@
                             <div class="form-group">
                                 <label class="col-sm-2">Phone Number</label>
                                 <div class="col-sm-6">
-                                    <input type="tel" class="form-control" id="PhoneNumber" />
+                                    <input type="tel" class="form-control" id="PhoneNumber" ng-model="user.phone_number" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Email Address</label>
                                 <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="EmailAddress" />
+                                    <input type="email" class="form-control" id="EmailAddress" ng-model="user.email" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Emergency Contact</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="EmergencyContact" />
+                                    <input type="text" class="form-control" id="EmergencyContact" ng-model="user.emergency_contact" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2">Emergency Phone</label>
                                 <div class="col-sm-6">
-                                    <input type="tel" class="form-control" id="EmergencyPhone" />
+                                    <input type="tel" class="form-control" id="EmergencyPhone" ng-model="user.emergency_phone" />
                                 </div>
                             </div>
                         </form>
-                        <button class="btn btn_style">Submit</button>
+                        <button class="btn btn_style" ng-click="create(user)">Submit</button>
                     </div>
                 </div>
                 <footer style="margin-top:10%">
