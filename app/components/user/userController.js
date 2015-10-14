@@ -9,6 +9,7 @@ app.controller('MainController', ['$scope', function($scope) {
 
     $scope.create = function(volunteer) {
     	console.log("click create");
-    	console.log(volunteer);
+    	console.log(volunteer.first_name);
+    	console.log(volunteer.email);
     }
 }]);
