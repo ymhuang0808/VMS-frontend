@@ -11,5 +11,5 @@ app.controller('MainController', ['$scope', function($scope) {
     	console.log("click create");
     	console.log(volunteer.first_name);
     	console.log(volunteer.email);
-    }
+    };
 }]);
